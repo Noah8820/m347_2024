@@ -1,0 +1,11 @@
+docker pull nginx:latest: Lädt das neueste Nginx-Image herunter.
+
+docker tag nginx:latest noah52/m347:nginx: Kennzeichnet und kopiert das Nginx-Image in das persönliche Repository.
+
+docker pull mariadb:latest: Lädt das neueste Mariadb-Image herunter.
+
+docker tag mariadb:latest noah52/m347:mariadb: Kennzeichnet und kopiert das Mariadb-Image in das persönliche Repository.
+
+docker push noah52/m347:nginx: Lädt das Nginx-Image in das persönliche Repository hoch.
+
+docker push noah52/m347:mariadb: Lädt das Mariadb-Image in das persönliche Repository hoch.

@@ -1,0 +1,43 @@
+Befehle KN01 B
+
+1. docker --version
+
+2. docker search ubuntu / docker search nginx
+
+3. docker run -d -p 8080:80 docker/getting-started
+
+-d: Startet den Container im Hintergrund (detach mode).
+
+-p 8080:80: Mapt den Port 8080 des Hosts auf Port 80 im Container.
+
+docker/getting-started: Der Name des Docker-Images, das ausgeführt werden soll.
+
+4. docker pull nginx 	docker create -p 8081:80 nginx	docker ps -a 	docker start 9a7dfdf9a387
+
+5. docker run -d
+
+Der Container wird ohne Interaktion im Hintergrund gestartet.
+Das Ubuntu-Image wird automatisch heruntergeladen, falls erforderlich.
+Keine direkte Benutzerinteraktion oder Terminalzugriff.
+Der Container läuft im Hintergrund weiter.
+
+docker run -it
+
+Der Container wird interaktiv gestartet, mit Zugriff auf das Terminal.
+Automatischer Download des Ubuntu-Images, falls nicht lokal verfügbar.
+Direkte Benutzerinteraktion möglich, Eingabe über Terminal.
+Der Container läuft im Vordergrund, Ausgabe wird direkt im Terminal angezeigt
+
+6. docker exec -it determined_jepsen /bin/bash		service nginx status
+
+7. docker ps -a
+
+8. docker stop determined_jepsen
+
+9. zum alle docker zu entfernen: docker rm $(docker ps -a -q)   	
+
+oder ein container: docker rm 9a7dfdf9a3877b4ccd0c34e874a5f6edd49abe901ed3a1693c35105efff39208
+
+10. zum alle docker zu entfernen: docker rmi $(docker images -q)
+
+oder ein container: docker rmi 3db8720ecbf5
