@@ -14,14 +14,13 @@ docker/getting-started: Der Name des Docker-Images, das ausgeführt werden soll.
 
 4. docker pull nginx 	docker create -p 8081:80 nginx	docker ps -a 	docker start 9a7dfdf9a387
 
-5. docker run -d
+5. docker run -d ubuntu
 
-Der Container wird ohne Interaktion im Hintergrund gestartet.
+Der Container wird nicht im Hintergrund gestartet.
 Das Ubuntu-Image wird automatisch heruntergeladen, falls erforderlich.
 Keine direkte Benutzerinteraktion oder Terminalzugriff.
-Der Container läuft im Hintergrund weiter.
 
-docker run -it
+docker run -it ubuntu
 
 Der Container wird interaktiv gestartet, mit Zugriff auf das Terminal.
 Automatischer Download des Ubuntu-Images, falls nicht lokal verfügbar.
