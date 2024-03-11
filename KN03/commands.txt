@@ -12,6 +12,7 @@ docker run --name=busybox4 -itd --network=bridge busybox
 
 2.
 ping busybox2
+ping 172.20.0.3
 
 3. 
 ping ip of "busybox4"
