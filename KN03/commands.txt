@@ -1,0 +1,17 @@
+docker network create tbz
+
+docker pull busybox:latest
+
+docker run --name=busybox1 -itd --network=tbz busybox
+
+docker run --name=busybox2 -itd --network=tbz busybox
+
+docker run --name=busybox3 -itd --network=bridge busybox
+
+docker run --name=busybox4 -itd --network=bridge busybox
+
+2.
+ping busybox2
+
+3. 
+ping ip of "busybox4"
