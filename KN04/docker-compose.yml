@@ -1,0 +1,27 @@
+version: '3.8'
+name: kn04-compose
+services:
+  database:
+    image: noah52/m347:kn02a-db
+    container_name: m347-kn04a-db
+    ports:
+      - "3306:3306"
+    networks:
+      - kn04-network
+  web:
+    image: noah52/m347:kn02a-web
+    container_name: m347-kn04a-web
+    ports:
+      - "5600:80"
+    depends_on:
+      - database
+    networks:
+      - kn04-network
+networks:
+  kn04-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.10.0.0/16
+          ip_range: 172.10.5.0/24
+          gateway: 172.10.5.254
